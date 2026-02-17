@@ -3,6 +3,75 @@ import Layout from '../components/Layout.astro';
 ---
 
 <Layout>
-  <h1>Home</h1>
-  <p>Welcome to MPL Guide.</p>
+  <main class="content">
+
+  <div class="card wecome-card">
+    <h2>welcome back</h2>
+    <p>everything About My Profit Land</p>
+    <button
+      class="button"
+      onclick="window.location.href='https://myprofitland.com/game/Minanashaat'"
+    >
+      Register Now <br />
+      its FREE
+    </button>
+  </div>
+
+  <div class="card">
+    <div class="cards-grid">
+
+      <div class="article-card">
+        <img src="/imgs/vct.png" alt="" />
+        <div>
+          <h3>War Specialist Status Upgrade via SVCT</h3>
+          <p>
+            A new update has arrived in <strong>My Profit Land</strong>,
+            bringing exciting improvements for war-focused players.
+          </p>
+          <button
+            class="button"
+            onclick="window.location.href='article2.html'"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <img src="/imgs/work.png" alt="Worker Guide" />
+        <div>
+          <h3>👷 Beginner Guide – Worker Path</h3>
+          <p>
+            New to My Profit Land? Learn the smart way to start as a Worker.
+          </p>
+          <button
+            class="button"
+            onclick="window.location.href='article3.html'"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+
+      <div class="article-card">
+        <img src="/imgs/mpllog.PNG" alt="" />
+        <div>
+          <h3>About My Profitland</h3>
+          <p>
+            My Profitland is an economy-based game like real life.
+          </p>
+          <button
+            class="button"
+            onclick="window.location.href='article1.html'"
+          >
+            Read More
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
 </Layout>
