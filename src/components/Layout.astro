@@ -5,28 +5,28 @@ import Left from './Left.astro';
 import Right from './Right.astro';
 ---
 
+
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<link rel="stylesheet" href="/style.css">
-<title>MPL Guide</title>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>MyProfitLand Guide</title>
+  </head>
 
-<body>
+  <body>
+    <div class="canvas">
 
-<Navbar />
+      <Navbar />
 
-<div class="layout">
-    <Left />
-
-    <main>
+      <div class="main">
+        <LeftSidebar />
         <slot />
-    </main>
+        <RightSidebar />
+      </div>
 
-    <Right />
-</div>
+      <Footer />
 
-<Footer />
-
-</body>
+    </div>
+  </body>
 </html>
