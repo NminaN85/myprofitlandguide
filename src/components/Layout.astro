@@ -1,0 +1,32 @@
+---
+import Navbar from './Navbar.astro';
+import Footer from './Footer.astro';
+import Left from './Left.astro';
+import Right from './Right.astro';
+---
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="/style.css">
+<title>MPL Guide</title>
+</head>
+
+<body>
+
+<Navbar />
+
+<div class="layout">
+    <Left />
+
+    <main>
+        <slot />
+    </main>
+
+    <Right />
+</div>
+
+<Footer />
+
+</body>
+</html>
