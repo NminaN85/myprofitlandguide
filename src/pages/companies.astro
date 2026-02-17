@@ -1,1 +1,78 @@
 
+<main class="content">
+
+  <div class="card wecome-card">
+    <h2>Select a Company</h2>
+    <p>Click on any company below to view details.</p>
+  </div>
+
+  <div class="categories-container">
+
+    <!-- Gathering Companies -->
+    <div class="category">
+      <h2>Gathering Companies</h2>
+
+      <div class="company-item"><div class="company-name">Coffee Plantation</div></div>
+      <div class="company-item"><div class="company-name">Wood Cutter</div></div>
+      <div class="company-item"><div class="company-name">Vineyard</div></div>
+      <div class="company-item"><div class="company-name">Cotton Plantation</div></div>
+      <div class="company-item"><div class="company-name">Cereal Farm</div></div>
+      <div class="company-item"><div class="company-name">Vegetable Farm</div></div>
+      <div class="company-item"><div class="company-name">Herbs Plantation</div></div>
+    </div>
+
+    <!-- Hand Working Companies -->
+    <div class="category">
+      <h2>Hand Working Companies</h2>
+      <div class="company-item"><div class="company-name">Cow Farm</div></div>
+    </div>
+
+    <!-- Guest Service Companies -->
+    <div class="category">
+      <h2>Guest Service Companies</h2>
+      <div class="company-item"><div class="company-name">MilkAnd CoffeeShop</div></div>
+    </div>
+
+    <!-- Engineering Companies -->
+    <div class="category">
+      <h2>Engineering Companies</h2>
+      <div class="company-item"><div class="company-name">Attack Weapons Factory</div></div>
+    </div>
+
+    <!-- Writing Companies -->
+    <div class="category">
+      <h2>Writing Companies</h2>
+      <div class="company-item"><div class="company-name">Bank</div></div>
+    </div>
+
+    <!-- Extracting Companies -->
+    <div class="category">
+      <h2>Extracting Companies</h2>
+      <div class="company-item"><div class="company-name">Iron Mine</div></div>
+      <div class="company-item"><div class="company-name">Stone Quarry</div></div>
+      <div class="company-item"><div class="company-name">Coal Mine</div></div>
+      <div class="company-item"><div class="company-name">Oil Extraction</div></div>
+      <div class="company-item"><div class="company-name">Uranium Mine</div></div>
+      <div class="company-item"><div class="company-name">Sand Pit</div></div>
+    </div>
+
+    <!-- Popup Card -->
+    <div class="company-popup" id="companyPopup">
+      <div class="popup-header">
+        <img src="/imgs/vct.png" alt="Company Logo" id="popupImage">
+        <h3 id="popupName">Company Name</h3>
+      </div>
+      <div class="popup-body">
+        <p><strong>Description:</strong> <span id="popupDesc"></span></p>
+        <p><strong>Raw Materials:</strong> <span id="popupMaterials"></span></p>
+        <p><strong>Products:</strong> <span id="popupProducts"></span></p>
+        <p><strong>Skill Required:</strong> <span id="popupSkill"></span></p>
+      </div>
+      <button id="popupClose">Close</button>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="/companies.js"></script>
