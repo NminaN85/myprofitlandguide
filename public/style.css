@@ -1,25 +1,161 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ROOT */
+:root{
+    --base-width: 1500;
+    --base-height: 900;
+    --gold:#d4af37;
+}
+
+/* BODY */
 body{
-  margin:0;
-  font-family: Arial;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #0b0f19;
+    color: beige;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+    'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-.layout{
-  display:grid;
-  grid-template-columns: 250px 1fr 250px;
-  min-height:80vh;
+/* CANVAS (الثابت الأساسي) */
+.canvas{
+    width: calc(var(--base-width)*1px);
+    height: calc(var(--base-height)*1px);
+    background:#111827;
+    border-radius: 14px;
+
+    display: flex;
+    flex-direction: column;
+
+    transform-origin: center;
+
+    transform: scale(
+        min(
+            calc(100vw/var(--base-width)),
+            calc(100vh/var(--base-height))
+        )
+    );
 }
 
-nav, footer{
-  background:#111;
-  color:white;
-  padding:20px;
+/* NAVBAR */
+.navbar{
+    height: 80px;
+    min-height: 80px;
+    background: #020617;
+    border-bottom: 5px solid var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color:var(--gold);
 }
 
-aside{
-  background:#f3f3f3;
-  padding:20px;
+.navbar .logo{
+    text-decoration: none;
+    color: var(--gold);
 }
 
-main{
-  padding:20px;
+/* MAIN GRID (ثابت 3 أعمدة دايمًا) */
+.main{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 260px 1fr 300px;
+    gap: 18px;
+    padding: 18px;
+}
+
+/* SIDEBAR */
+.sidebar{
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 20px;
+    color:#cbd5e1;
+}
+
+.menu-item{
+    padding: 12px;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: 0.25s;
+}
+
+.menu-item:hover{
+    background: rgba(212,175,55,0.12);
+    color:#ffd700;
+}
+
+/* CONTENT */
+.content{
+    background:#0b1220;
+    border-radius: 10px;
+    padding:25px;
+    color:#e2e8f0;
+}
+
+/* RIGHTBAR */
+.rightbar{
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 20px;
+    color:#cbd5e1;
+}
+
+/* CARDS */
+.card{
+    background: #020617;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #1e293b;
+}
+
+.wecome-card{
+    text-align: center;
+}
+
+/* BUTTON */
+.button{
+    margin-top: 15px;
+    background: linear-gradient(135deg , var(--gold) , #f5d76e);
+    border: none;
+    padding:12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.button:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgb(79 , 70 , 229 , 0.35);
+}
+
+/* FOOTER */
+.footer {
+    min-height: 60px;
+    background: #020617;
+    border-top: 3px solid var(--gold);
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 0 0 10px 10px;
+}
+
+/* GOLD TEXT */
+.gold-text {
+    color: var(--gold);
+    font-weight: bold;
 }
