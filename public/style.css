@@ -59,10 +59,21 @@ body{
     color:var(--gold);
 }
 
-.navbar .logo{
+navbar .logo{
     text-decoration: none;
     color: var(--gold);
+     display: flex;
+  align-items: center;
+  gap: 8px; 
+    
 }
+
+
+navbar .logo img {
+  height: 40px; 
+  width: auto;
+}
+
 
 /* MAIN GRID (ثابت 3 أعمدة دايمًا) */
 .main{
