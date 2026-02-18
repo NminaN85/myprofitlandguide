@@ -140,6 +140,113 @@ body{
     box-shadow: 0 8px 20px rgb(79 , 70 , 229 , 0.35);
 }
 
+.card{
+    background: #020617;
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #1e293b;
+}
+
+.button{
+    margin-top: 15px;
+    background: linear-gradient(135deg , var(--gold) , #f5d76e);
+    border: none;
+    padding:12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.button:hover{
+    transform: translate(-2px);
+    box-shadow: 0 8px 20px rgb(79 , 70 , 229 , 0.35);
+}
+
+.article-card {
+    display: flex;
+    flex-direction: row; 
+    gap: 15px;
+    padding: 18px;
+    border-radius: 10px;
+    border: 2px solid #1e293b;
+    background: #020617;
+    width: 100%; 
+    align-items: flex-start;
+}
+
+.article-card img {
+    width: 33%; 
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; 
+}
+
+.article-card > div {
+    display: flex;
+    flex-direction: column;
+    width: 67%; 
+    gap: 8px;
+}
+
+.article-card h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.article-card p {
+    margin: 0;
+    color: #e2e8f0;
+    flex: 1; /
+}
+
+.article-card .button {
+    align-self: center; 
+    margin-top: 10px;
+    background: linear-gradient(135deg , var(--gold) , #f5d76e);
+    border: none;
+    padding:12px 20px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.article-card .button:hover {
+    transform: translate(-2px);
+    box-shadow: 0 8px 20px rgb(79 , 70 , 229 , 0.35);
+}
+
+.article-page .card{
+    padding: 20px;
+    margin-bottom: 20px;
+    background: #020617;
+    border-radius: 10px;
+    border:solid 1px #1e293b;
+    text-align: center;
+    color: #e2e8f0;
+}
+
+
+
+.article-page .meta{
+    color:#94a3b8;
+    font-size: 0.9em;
+    object-fit: cover;
+}
+.article-page .article-image{
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.article-page a{
+    color: #3b82f6;
+    text-decoration: none;
+}
+
 /* FOOTER */
 .footer {
     min-height: 60px;
