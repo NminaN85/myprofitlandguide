@@ -1,0 +1,107 @@
+---
+import Layout from '../components/Layout.astro';
+---
+<Layout>
+<main class="content">
+
+ <div class="card">
+                <div class="card wecome-card">
+                    <h2><span>Cereal Farm</span> Cost Calculator</h2>
+                    <p class="subtitle">
+                        Cereal Farm produces Wheat and Corn.<br>
+                        Wheat is used by <a href="Brewery.html" class="gold-text">Brewery</a> to make Beer
+                        and by <a href="mill.html" class="gold-text">Mill</a> to make Wheat Flour.<br>
+                        Corn is used to make Corn Flour.
+                    </p>
+                </div>
+
+                <!-- PRODUCTS -->
+                <div class="products card">
+                    <h3>Select Product(s)</h3>
+                    <label><input type="checkbox" class="productCheck" value="wheat"> Wheat</label><br>
+                    <label><input type="checkbox" class="productCheck" value="corn"> Corn</label><br>
+                </div>
+
+                <!-- INPUTS -->
+                <div class="inputs-grid">
+                    <div class="input-group">
+                        <label for="HourlyWage">Hourly Wage</label>
+                        <input id="HourlyWage" type="number" placeholder="Hourly wage">
+                    </div>
+                    <div class="input-group">
+                        <label for="WageTax">Wage Tax %</label>
+                        <input id="WageTax" type="number" placeholder="Wage Tax %">
+                    </div>
+                    <div class="input-group">
+                        <label for="WaterCost">Water Cost</label>
+                        <input id="WaterCost" type="number" placeholder="Water Cost">
+                    </div>
+                    <div class="input-group">
+                        <label for="ElectricityCost">Electricity Cost</label>
+                        <input id="ElectricityCost" type="number" placeholder="Electricity Cost">
+                    </div>
+                    <div class="input-group">
+                        <label for="LicenceForm">License Form</label>
+                        <input id="LicenceForm" type="number" placeholder="License Form">
+                    </div>
+                    <div class="input-group">
+                        <label for="LocalGold">Local Currency / Gold</label>
+                        <input id="LocalGold" type="number" placeholder="Local currency / Gold">
+                    </div>
+                    <div class="input-group">
+                        <label for="EuroGold">Euro / Gold</label>
+                        <input id="EuroGold" type="number" placeholder="Euro / Gold">
+                    </div>
+                </div>
+
+                <!-- UPGRADE -->
+                <div class="upgrade-section">
+                    <h3>Company Upgrade Level</h3>
+                    <div class="upgrade-options">
+                        <label><input type="radio" name="upgrade" value="1">1</label>
+                        <label><input type="radio" name="upgrade" value="2">2</label>
+                        <label><input type="radio" name="upgrade" value="3">3</label>
+                        <label><input type="radio" name="upgrade" value="4">4</label>
+                        <label><input type="radio" name="upgrade" value="5">5</label>
+                        <label><input type="radio" name="upgrade" value="6">6</label>
+                        <label><input type="radio" name="upgrade" value="7">7</label>
+                        <label><input type="radio" name="upgrade" value="8">8</label>
+                    </div>
+                </div>
+
+                <!-- WEEKLY BOOST -->
+                <div class="card">
+                    <label style="display: flex; align-items: center; gap: 10px">
+                        <input type="checkbox" id="weeklyBoostCheck">
+                        <span class="gold-text">Activate Weekly Boost (20% Free Production)</span>
+                    </label>
+                    <div id="boostInputs" style="display: none; margin-top: 15px">
+                        <div class="input-group">
+                            <label for="BoostCost">Weekly Boost Cost (Gold)</label>
+                            <input id="BoostCost" type="number" placeholder="Gold paid for boost">
+                        </div>
+                        <div class="input-group">
+                            <label for="WeeklyProduction">Weekly Produced Quantity</label>
+                            <input id="WeeklyProduction" type="number" placeholder="Total pieces produced this week">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CALCULATE BUTTON -->
+                <div class="card center-button">
+                    <button id="calcBtn" class="button">Calculate Cost</button>
+                </div>
+
+                <!-- RESULT -->
+                <div class="card">
+                    <div class="result">
+                        <h3 class="gold-text">Result</h3>
+                        <p id="resultText">Your cost breakdown will appear here.</p>
+                    </div>
+                </div>
+
+            </div>
+        
+
+</main>
+</Layout>
