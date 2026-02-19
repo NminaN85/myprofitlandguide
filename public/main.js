@@ -39,6 +39,11 @@ const products = {
         licenceUses: 1000,
         ingredients: {Chocco:0.5, Porcessedmilk: 0.1 ,coffeebeans: 0.04 , water: 0.07, electricity: 0.07 }
     }
+    herbs: {
+        workHours: 0.6,
+        licenceUses: 500,
+        ingredients: {water: 0.07, electricity: 0.05 }
+    }
 };
 
 
