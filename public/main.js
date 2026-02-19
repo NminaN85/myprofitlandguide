@@ -44,6 +44,11 @@ const products = {
         licenceUses: 500,
         ingredients: {water: 0.07, electricity: 0.05 }
     },
+    vegetables: {
+        workHours: 0.6,
+        licenceUses: 1000,
+        ingredients: {water: 0.15, electricity: 0.03 }
+    },
 };
 
 
