@@ -296,6 +296,31 @@ body{
     color: var(--gold);
     transform: translateY(-3px);
 }
+
+.gathering {
+  border-left: 5px solid #4CAF50;   /* Green – nature / farming */
+}
+
+.handworking {
+  border-left: 5px solid #FF9800;   
+}
+
+.guestservicing {
+  border-left: 5px solid #9C27B0;   
+}
+
+.engineering {
+  border-left: 5px solid #2196F3;   
+}
+
+.writingaesthetics {
+  border-left: 5px solid #E91E63;   
+}
+
+.extraction {
+  border-left: 5px solid #795548;   
+}
+
 .inputs-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
