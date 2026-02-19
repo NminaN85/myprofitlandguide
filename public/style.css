@@ -485,3 +485,21 @@ body{
   color: #000;
   font-weight: bold;
 }
+strike-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 15px;
+                font-family: Arial, sans-serif;
+            }
+
+            .strike-table th,
+            .strike-table td {
+                border: 1px solid #ddd;
+                padding: 12px;
+                text-align: center;
+            }
+
+            .strike-table th {
+                background-color: #f2a900; /* Orange to match theme */
+                color: white;
+                font-weight: bold;}
