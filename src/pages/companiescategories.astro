@@ -1,0 +1,43 @@
+---
+import Layout from '../components/Layout.astro';
+---
+<Layout>
+
+    <div class="content">
+            <div class="card wecome-card">
+                <h2>Select a Skill Category</h2>
+                <p>Choose a category to explore the companies related to that skill.</p>
+            </div>
+
+            <div class="card">
+                <div class="cards-grid">
+
+                    <div class="company-card" onclick="location.href='/gathering'">
+                        🌾 Gathering
+                    </div>
+
+                    <div class="company-card" onclick="location.href='/handworking'">
+                        🛠 Hand Working
+                    </div>
+
+                    <div class="company-card" onclick="location.href='/guestservicing'">
+                        ☕ Guest Servicing
+                    </div>
+
+                    <div class="company-card" onclick="location.href='/engineering'">
+                        ⚙ Engineering
+                    </div>
+
+                    <div class="company-card" onclick="location.href='/writingaesthetics'">
+                        ✍ Writing & Aesthetics
+                    </div>
+
+                    <div class="company-card" onclick="location.href='/extraction'">
+                        ⛏ Extraction
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+</Layout>
