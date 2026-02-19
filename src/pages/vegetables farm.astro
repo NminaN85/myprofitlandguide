@@ -1,0 +1,111 @@
+---
+import Layout from '../components/Layout.astro';
+---
+<Layout>
+<main class="content">
+
+  <div class="card">
+
+                 <div class="card wecome-card">
+    <h2><span> Vegetables Farm </span> Cost Calculator</h2>
+    <p class="subtitle">
+        
+        Vegetable Farm  produces Vegetables that are used to make Meals and Bacon. Vegetables to be used by the company <a href="'/restaurant'" class="gold-text">Restaurant</a>.  and 
+        <a href="'/pigfarm'" class="gold-text">Restaurant</a> and <a href="'/laboratory'" class="gold-text">Laboratory</a>.
+    </p>
+</div>
+
+<!-- PRODUCTS -->
+<div class="products">
+    <label class="product" for="coffeebeansCheck">
+        <input 
+            id="vegetablesCheck"
+            class="productCheck"
+            type="checkbox"
+            value="vegetables">
+        <span>Vegetables</span>
+    </label>
+</div>
+
+
+<!-- INPUTS -->
+<div class="inputs-grid">
+    <div class="input-group">
+        <label for="HourlyWage">Hourly Wage</label>
+        <input id="HourlyWage" type="number" placeholder="Hourly wage">
+    </div>
+    <div class="input-group">
+        <label for="WageTax">Wage Tax %</label>
+        <input id="WageTax" type="number" placeholder="Wage Tax %">
+    </div>
+    <div class="input-group">
+        <label for="WaterCost">Water Cost</label>
+        <input id="WaterCost" type="number" placeholder="Water Cost">
+    </div>
+    <div class="input-group">
+        <label for="ElectricityCost">Electricity Cost</label>
+        <input id="ElectricityCost" type="number" placeholder="Electricity Cost">
+    </div>
+    <div class="input-group">
+        <label for="LicenceForm">License Form</label>
+        <input id="LicenceForm" type="number" placeholder="License Form">
+    </div>
+    <div class="input-group">
+        <label for="LocalGold">Local Currency / Gold</label>
+        <input id="LocalGold" type="number" placeholder="local currency / Gold ">
+    </div>
+    <div class="input-group">
+        <label for="EuroGold">Euro / Gold</label>
+        <input id="EuroGold" type="number" placeholder="Euro / Gold ">
+    </div>
+</div>
+
+<!-- UPGRADE -->
+<div class="upgrade-section">
+    <h3>Company Upgrade Level</h3>
+    <div class="upgrade-options">
+        <label><input type="radio" name="upgrade" value="1"><span>1</span></label>
+        <label><input type="radio" name="upgrade" value="2"><span>2</span></label>
+        <label><input type="radio" name="upgrade" value="3"><span>3</span></label>
+        <label><input type="radio" name="upgrade" value="4"><span>4</span></label><br>
+        <label><input type="radio" name="upgrade" value="5"><span>5</span></label>
+        <label><input type="radio" name="upgrade" value="6"><span>6</span></label>
+        <label><input type="radio" name="upgrade" value="7"><span>7</span></label>
+        <label><input type="radio" name="upgrade" value="8"><span>8</span></label><br>
+    </div>
+</div>
+
+<!-- WEEKLY BOOST -->
+<div class="card">
+    <label style="display:flex; align-items:center; gap:10px;">
+        <input type="checkbox" id="weeklyBoostCheck">
+        <span class="gold-text">Activate Weekly Boost (20% Free Production)</span>
+    </label>
+
+    <div id="boostInputs" style="display:none; margin-top:15px;">
+        <div class="input-group">
+            <label for="BoostCost">Weekly Boost Cost (Gold)</label>
+            <input id="BoostCost" type="number" placeholder="Gold paid for boost">
+        </div>
+
+        <div class="input-group">
+            <label for="WeeklyProduction">Weekly Produced Quantity</label>
+            <input id="WeeklyProduction" type="number" placeholder="Total pieces produced this week">
+        </div>
+    </div>
+</div>
+
+
+<div class="card center-button ">
+    <button id= "calcBtn" class="button">Calculate Cost</button>
+</div>
+
+<div class="card">
+    <div class="result">
+        <h3 class= "gold-text">Result</h3>
+        <p id="resultText">Your cost breakdown will appear here.</p>
+    </div>
+</div>
+</div>
+</main>
+</Layout>
