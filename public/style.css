@@ -93,7 +93,7 @@ body{
 .animated-card::before{
     content: "";
     position: absolute;
-    width: 120px;
+    width: 120%;
     height: 120%;
     background: linear-gradient(180deg,#00b7ff , #ff30ff);
     animation: rotate 3s linear infinite;
