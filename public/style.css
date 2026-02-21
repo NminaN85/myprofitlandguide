@@ -74,6 +74,47 @@ body{
   width: 60px;
 }
 
+.animated-card{
+    width: 190px;
+    height: 254px;
+    background: #07182e;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.animated-card h2{
+    color: #ffffff;
+    font-size: 2em;
+    z-index: 2;
+}
+.animated-card::before{
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 120%;
+    background: linear-gradient(180deg,#00b7ff , #ff30ff);
+    animation: rotate 3s linear infinite;
+}
+@keyframes rotate {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+.animated-card::after{
+    content: "";
+    position: absolute;
+    inset: 5px;
+    background: #07182e;
+    border-radius: 15px;
+
+}
+
 
 /* MAIN GRID (ثابت 3 أعمدة دايمًا) */
 .main{
