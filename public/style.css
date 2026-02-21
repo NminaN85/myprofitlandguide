@@ -85,7 +85,7 @@ body{
     position: relative;
     overflow: hidden;
 }
-.animated-card h2{
+.animated-card h2 p{
     color: #ffffff;
     font-size: 2em;
     z-index: 2;
