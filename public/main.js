@@ -54,6 +54,11 @@ const products = {
         licenceUses: 450,
         ingredients: {water: 0.06, electricity: 0.02 }
     },
+     wood: {
+        workHours: 1,
+        licenceUses: 500,
+        ingredients: {water: 0.07, electricity: 0.14 }
+    },
 };
 
 
