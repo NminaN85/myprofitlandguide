@@ -49,7 +49,7 @@ const products = {
         licenceUses: 1000,
         ingredients: {water: 0.15, electricity: 0.03 }
     },
-    Grapes: {
+    grapes: {
         workHours: 0.5,
         licenceUses: 450,
         ingredients: {water: 0.06, electricity: 0.02 }
