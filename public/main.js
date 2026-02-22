@@ -56,6 +56,8 @@ const products = {
     },
 };
 
+console.log("checked:", checkedProducts);
+console.log("products object:", products);
 
 
 document.addEventListener("DOMContentLoaded", () => {
