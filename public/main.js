@@ -59,6 +59,11 @@ const products = {
         licenceUses: 500,
         ingredients: {water: 0.07, electricity: 0.14 }
     },
+     weapons: {
+        workHours: 2.9,
+        licenceUses: 25,
+        ingredients: {water: 0.6, electricity: 2.5, steel: 2, wood: 0.6} 
+    },
 };
 
 
@@ -119,6 +124,8 @@ function calculateCostForPage() {
     const CoffeebeansCost = parseFloat(document.getElementById("CoffeebeansCost")?.value)||0;
     const ProcessedmilkCost = parseFloat(document.getElementById("PorcessedmilkCost")?.value)||0;
     const ChoccoCost = parseFloat(document.getElementById("ChoccoCost")?.value)||0;
+    const woodCost = parseFloat(document.getElementById("woodCost")?.value)||0;
+    const steelCost = parseFloat(document.getElementById("steelCost")?.value)||0;
 
     const LicenceForm = parseFloat(document.getElementById("LicenceForm")?.value) || 0;
     const LocalGold = parseFloat(document.getElementById("LocalGold")?.value) || 1;
