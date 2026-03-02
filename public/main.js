@@ -201,6 +201,14 @@ function calculateCostForPage() {
             totalIngredients +=
                 ProcessedmilkCost * product.ingredients.Porcessedmilk * producedQuantity;
         }
+        if (product.ingredients.steel) {
+            totalIngredients +=
+                steelCost * product.ingredients.steel * producedQuantity;
+        }
+        if (product.ingredients.wood) {
+            totalIngredients +=
+                woodCost * product.ingredients.wood * producedQuantity;
+        }
        
         
 
