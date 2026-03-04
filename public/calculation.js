@@ -64,6 +64,11 @@ const products = {
         licenceUses: 25,
         ingredients: { water: 0.6, electricity: 2.5, steel: 2, wood: 0.6 }
     },
+    steel: { 
+        workHours: 0.7, 
+        licenceUses: 450,
+        ingredients: { coal: 0.4, iron: 0.4, electricity: 0.45, water: 0.1 } 
+    },
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -119,6 +124,8 @@ function calculateCostForPage() {
     const ChoccoCost = parseFloat(document.getElementById("ChoccoCost")?.value) || 0;
     const woodCost = parseFloat(document.getElementById("woodCost")?.value) || 0;
     const steelCost = parseFloat(document.getElementById("steelCost")?.value) || 0;
+    const coalCost = parseFloat(document.getElementById("coalCost")?.value) || 0;
+    const ironCost = parseFloat(document.getElementById("ironCost")?.value) || 0;
 
     const LicenceForm = parseFloat(document.getElementById("LicenceForm")?.value) || 0;
     const LocalGold = parseFloat(document.getElementById("LocalGold")?.value) || 1;
@@ -173,7 +180,9 @@ function calculateCostForPage() {
             Chocco: ChoccoCost,
             Porcessedmilk: ProcessedmilkCost,
             steel: steelCost,
-            wood: woodCost
+            wood: woodCost,
+            coal: coalCost,
+            iron: ironCost,
         };
 
         let totalIngredients = 0;
