@@ -18,9 +18,9 @@ const products = {
     steel: { workHours: 0.7, licenceUses: 450, ingredients: { coal: 0.4, iron: 0.4, electricity: 0.45, water: 0.1 } }
 };
 
-
-
-
+// =======================
+// DOM & EVENTS
+// =======================
 document.addEventListener("DOMContentLoaded", () => {
 
     // Weekly boost toggle
@@ -51,15 +51,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // =======================
-// CALCULATION 
+// CALCULATION FUNCTION
 // =======================
 function calculateCostForPage() {
+
     const checkedProducts = Array.from(
         document.querySelectorAll(".productCheck:checked")
     ).map(el => el.value);
 
     if (checkedProducts.length === 0) return "Please select at least one product!";
 
+    // ===== Inputs =====
     const HourlyWage = parseFloat(document.getElementById("HourlyWage")?.value) || 0;
     const WageTax = parseFloat(document.getElementById("WageTax")?.value) || 0;
     const LicenceForm = parseFloat(document.getElementById("LicenceForm")?.value) || 0;
@@ -71,6 +73,19 @@ function calculateCostForPage() {
     const WeeklyProduction = parseFloat(document.getElementById("WeeklyProduction")?.value) || 0;
     const productionMultiplier = 1 + (upgradeLevel * 0.10);
 
+    // ===== Cost map for dynamic ingredients =====
+    const ingredientInputs = [
+        "water", "electricity", "WheatFlour", "coffeebeans",
+        "Chocco", "Porcessedmilk", "wood", "steel",
+        "coal", "iron"
+    ];
+
+    let costMap = {};
+    ingredientInputs.forEach(name => {
+        costMap[name] = parseFloat(document.getElementById(name + "Cost")?.value) || 0;
+    });
+
+    // ===== Calculate =====
     let results = [];
 
     checkedProducts.forEach(key => {
@@ -87,13 +102,11 @@ function calculateCostForPage() {
         const LicenceGoldPerProduct = (LicenceForm / product.licenceUses) + (EuroGold / product.licenceUses);
         const totalLicence = LicenceGoldPerProduct * producedQuantity;
 
-        // ============
-        // Ingredients 
-        // =============
+        // Ingredients (dynamic)
         let totalIngredients = 0;
         for (const ingredient in product.ingredients) {
             const quantity = product.ingredients[ingredient];
-            const cost = parseFloat(document.getElementById(ingredient + "Cost")?.value) || 0;
+            const cost = costMap[ingredient] || 0;
             totalIngredients += cost * quantity * producedQuantity;
         }
 
