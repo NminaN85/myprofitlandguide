@@ -210,8 +210,8 @@ function calculateCostForPage() {
             wood: woodCost,
             coal: coalCost,
             iron: ironCost,
-            sand: sandCose,
-            stone: stoneCose,
+            sand: sandCost,
+            stone: stoneCost,
             housewindow: housewindowCost,
         };
 
