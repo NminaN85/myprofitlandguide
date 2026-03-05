@@ -69,6 +69,27 @@ const products = {
         licenceUses: 450,
         ingredients: { coal: 0.4, iron: 0.4, electricity: 0.45, water: 0.1 } 
     },
+    mansion: { 
+        workHours: 150, 
+        licenceUses: 5,
+        ingredients: { steel: 80, wood: 70, stone: 160 , housewindow: 6, sand: 40, electricity: 50, water: 50 } 
+    },
+     smallhouse: { 
+        workHours: 50, 
+        licenceUses: 60,
+        ingredients: { steel: 40, wood: 30, stone: 100 , housewindow: 2, sand: 20, electricity: 23, water: 23 } 
+    },
+   niceappartment: { 
+        workHours: 100, 
+        licenceUses: 9,
+        ingredients: { steel: 60, wood: 50, stone: 130 , housewindow: 4, sand: 30, electricity: 36, water: 36 } 
+    },
+     houserepaire: { 
+        workHours: 2, 
+        licenceUses: 200,
+        ingredients: { wood: 1, stone: 4 , housewindow: 0.2, sand: 5, electricity: 2, water: 10 } 
+    },
+    
 };
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -126,6 +147,12 @@ function calculateCostForPage() {
     const steelCost = parseFloat(document.getElementById("steelCost")?.value) || 0;
     const coalCost = parseFloat(document.getElementById("coalCost")?.value) || 0;
     const ironCost = parseFloat(document.getElementById("ironCost")?.value) || 0;
+    const stoneCost = parseFloat(document.getElementById("stoneCost")?.value) || 0;
+    const sandCost = parseFloat(document.getElementById("sandCost")?.value) || 0;
+    const housewindowCost = parseFloat(document.getElementById("housewindowCost")?.value) || 0;
+
+
+
 
     const LicenceForm = parseFloat(document.getElementById("LicenceForm")?.value) || 0;
     const LocalGold = parseFloat(document.getElementById("LocalGold")?.value) || 1;
@@ -183,6 +210,9 @@ function calculateCostForPage() {
             wood: woodCost,
             coal: coalCost,
             iron: ironCost,
+            sand: sandCose,
+            stone: stoneCose,
+            housewindow: housewindowCost,
         };
 
         let totalIngredients = 0;
