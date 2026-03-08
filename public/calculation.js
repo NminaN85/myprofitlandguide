@@ -89,6 +89,11 @@ const products = {
         licenceUses: 200,
         ingredients: { wood: 1, stone: 4 , housewindow: 0.2, sand: 5, electricity: 2, water: 10 } 
     },
+     processedMilk: { 
+        workHours: 0.7, 
+        licenceUses: 1600,
+        ingredients: { rawmilk: 1.1, electricity: 0.19, water: 0.35 } 
+    },
     
 };
 
@@ -150,6 +155,8 @@ function calculateCostForPage() {
     const stoneCost = parseFloat(document.getElementById("stoneCost")?.value) || 0;
     const sandCost = parseFloat(document.getElementById("sandCost")?.value) || 0;
     const housewindowCost = parseFloat(document.getElementById("housewindowCost")?.value) || 0;
+    const rawmilkCost = parseFloat(document.getElementById("rawmilkCost")?.value) || 0;
+
 
 
 
@@ -213,6 +220,8 @@ function calculateCostForPage() {
             sand: sandCost,
             stone: stoneCost,
             housewindow: housewindowCost,
+            rawmilk: rawmilkCost,
+            
         };
 
         let totalIngredients = 0;
