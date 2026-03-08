@@ -6,14 +6,14 @@ import Layout from '../components/Layout.astro';
 
 <div class="card">
   <div class="card wecome-card">
-    <h2><span>Foundary </span> Damage Calculator</h2>
+    <h2><span>Damage </span> Calculator</h2>
     <p class="subtitle">
-      Calculate how many Mocha and total cost needed to reach target damage.
+      Calculate how many Mocha and total cost needed to reach target damage using your weapons and boosts.
     </p>
   </div>
 
+  <!-- INPUTS -->
   <div class="inputs-grid">
-
     <div class="input-group">
       <label for="weaponPrice">Weapon Price</label>
       <input id="weaponPrice" type="number" placeholder="Weapon Price">
@@ -77,12 +77,20 @@ import Layout from '../components/Layout.astro';
         <option value="1500000">1,500,000</option>
       </select>
     </div>
-
   </div>
 
-  <button onclick="calculateDamage()">Calculate</button>
+  <!-- BUTTON -->
+  <div class="card center-button">
+    <button id="calcBtn" class="button">Calculate Damage</button>
+  </div>
 
-  <div class="result" id="result"></div>
+  <!-- RESULT -->
+  <div class="card">
+    <div class="result">
+      <h3 class="gold-text">Result</h3>
+      <p id="resultText">Your damage breakdown will appear here.</p>
+    </div>
+  </div>
 </div>
 
 </main>
