@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
     while (accumulatedDamage < targetDamage) {
       for (let energy of energies) {
         let hitDamage = weaponDamage * (energy / 100);
-        // نطبق modifiers بعد Base Damage لكل ضربة
-        hitDamage *= rank * (1 + orgBoost/100) * (1 + poiRegion/100) * bunker * clothing * nativeBonus * badge;
+        // نطبق modifiers
+        hitDamage *= rank * (1 + orgBoost / 100) * (1 + poiRegion / 100) * bunker * clothing * nativeBonus * badge;
         accumulatedDamage += hitDamage;
         hitsCount++;
         if (accumulatedDamage >= targetDamage) break;
@@ -46,13 +46,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const mocaccinoCost = mocaccinoNeeded * mocaccinoPrice;
     const totalCost = weaponsCost + mocaccinoCost;
 
-    // ======== عرض النتائج ========
+    // ======== عرض النتائج بنفس شكل القديم ========
+    const baseDamage = energies.reduce((sum, e) => sum + weaponDamage * (e / 100), 0); // 11100
+    const totalDamagePerMocaccino = baseDamage * rank * (1 + orgBoost / 100) * (1 + poiRegion / 100) * bunker * clothing * nativeBonus * badge;
+
     const resultText = document.getElementById("mocaccinoResultText");
     if (resultText) {
       resultText.innerHTML =
-                `Damage per Mocaccino : ${Math.round(totalDamagePerMocaccino)}<br>` +
+
+        `Damage per Mocaccino : ${Math.round(totalDamagePerMocaccino)}<br>` +
         `Mocaccino Needed: ${mocaccinoNeeded}<br>` +
         `Total Hits: ${hitsCount}<br>` +
+        `Weapons Needed: ${weaponsNeeded}<br>` +
         `Total Cost: ${totalCost.toFixed(2)} Gold`;
     }
   });
