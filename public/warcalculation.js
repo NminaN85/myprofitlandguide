@@ -50,10 +50,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultText = document.getElementById("mocaccinoResultText");
     if (resultText) {
       resultText.innerHTML =
-        `Damage per Mocaccino (4 hits base): ${Math.round(weaponDamage* (100/100) + weaponDamage*(95/100) + weaponDamage*(90/100) + weaponDamage*(85/100))}<br>` +
-        `Total Hits needed: ${hitsCount}<br>` +
+                `Damage per Mocaccino : ${Math.round(totalDamagePerMocaccino)}<br>` +
         `Mocaccino Needed: ${mocaccinoNeeded}<br>` +
-        `Weapons Needed: ${weaponsNeeded}<br>` +
+        `Total Hits: ${hitsCount}<br>` +
         `Total Cost: ${totalCost.toFixed(2)} Gold`;
     }
   });
