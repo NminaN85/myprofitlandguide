@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalHits = mocaccinoNeeded * energies.length;
 
     // ======== Weapons Needed ========
-    const weaponsNeeded = Math.ceil(totalHits / 200);
+    const weaponsNeeded = totalHits / 200;
 
     // ======== حساب التكلفة ========
     const weaponsCost = weaponsNeeded * weaponPrice;
