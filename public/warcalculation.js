@@ -43,8 +43,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultText = document.getElementById("mocaccinoResultText");
     if (resultText) {
       resultText.innerHTML =
-        `Base Damage (4 hits): ${Math.round(baseDamage)}<br>` +
-        `Damage per Mocaccino (with modifiers): ${Math.round(totalDamagePerMocaccino)}<br>` +
+
+        `Damage per Mocaccino : ${Math.round(totalDamagePerMocaccino)}<br>` +
         `Mocaccino Needed: ${mocaccinoNeeded}<br>` +
         `Total Hits: ${totalHits}<br>` +
         `Total Cost: ${totalCost.toFixed(2)} Gold`;
