@@ -114,10 +114,15 @@ const products = {
         licenceUses: 200,
         ingredients: { sand: 4, wood: 12, electricity: 1, water: 0.5 } 
     },
-     glasspanel: { 
-        workHours: 2, 
-        licenceUses: 200,
-        ingredients: { sand: 2, electricity: 1, water: 0.5 } 
+     wheatflour: { 
+        workHours: 0.5, 
+        licenceUses: 1000,
+        ingredients: { wheat: 1, electricity: 0.2, water: 0.2 } 
+    },
+    cornflour: { 
+        workHours: 0.5, 
+        licenceUses: 1000,
+        ingredients: { corn: 1, electricity: 0.2, water: 0.2 } 
     },
     
 };
@@ -182,9 +187,8 @@ function calculateCostForPage() {
     const housewindowCost = parseFloat(document.getElementById("housewindowCost")?.value) || 0;
     const rawmilkCost = parseFloat(document.getElementById("rawmilkCost")?.value) || 0;
     const cornflourCost = parseFloat(document.getElementById("cornflourCost")?.value) || 0;
-
-
-
+    const cornCost = parseFloat(document.getElementById("cornCost")?.value) || 0;
+    const wheatCost = parseFloat(document.getElementById("wheatCost")?.value) || 0;
 
     const LicenceForm = parseFloat(document.getElementById("LicenceForm")?.value) || 0;
     const LocalGold = parseFloat(document.getElementById("LocalGold")?.value) || 1;
@@ -247,6 +251,8 @@ function calculateCostForPage() {
             housewindow: housewindowCost,
             rawmilk: rawmilkCost,
             cornflour: cornflourCost,
+             corn: cornCost,
+            wheat: wheatCost,
 
             
         };
