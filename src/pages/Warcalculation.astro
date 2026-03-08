@@ -1,0 +1,89 @@
+---
+import Layout from '../components/Layout.astro';
+---
+<Layout>
+<main class="content">
+
+<div class="card">
+  <div class="card wecome-card">
+    <h2><span>Foundary </span> Damage Calculator</h2>
+    <p class="subtitle">
+      Calculate how many Mocha and total cost needed to reach target damage.
+    </p>
+  </div>
+
+  <div class="inputs-grid">
+
+    <div class="input-group">
+      <label for="weaponPrice">Weapon Price</label>
+      <input id="weaponPrice" type="number" placeholder="Weapon Price">
+    </div>
+
+    <div class="input-group">
+      <label for="mochaPrice">Mocha Price</label>
+      <input id="mochaPrice" type="number" placeholder="Mocha Price">
+    </div>
+
+    <div class="input-group">
+      <label for="orgBoost">Organisation Boost %</label>
+      <input id="orgBoost" type="number" placeholder="Organisation %">
+    </div>
+
+    <div class="input-group">
+      <label for="poiRegion">POI Region %</label>
+      <input id="poiRegion" type="number" placeholder="Region Bonus %">
+    </div>
+
+    <div class="input-group">
+      <label for="rank">Military Rank</label>
+      <select id="rank">
+        <option value="1.05">Private (5%)</option>
+        <option value="1.10">Corporal (10%)</option>
+        <option value="1.15">Sergeant (15%)</option>
+        <option value="1.20">Lieutenant (20%)</option>
+        <option value="1.25">Captain (25%)</option>
+        <option value="1.30">Major (30%)</option>
+        <option value="1.35">Colonel (35%)</option>
+        <option value="1.40">General (40%)</option>
+      </select>
+    </div>
+
+    <div class="input-group check">
+      <label><input type="checkbox" id="bunker"> Enemy in Bunker</label>
+    </div>
+
+    <div class="input-group check">
+      <label><input type="checkbox" id="clothing"> Full Clothes</label>
+    </div>
+
+    <div class="input-group check">
+      <label><input type="checkbox" id="native"> Native Weapon</label>
+    </div>
+
+    <div class="input-group check">
+      <label><input type="checkbox" id="badge"> NK Badge</label>
+    </div>
+
+    <div class="input-group">
+      <label for="targetDamage">Target Damage</label>
+      <select id="targetDamage">
+        <option value="20000">20,000</option>
+        <option value="40000">40,000</option>
+        <option value="90000">90,000</option>
+        <option value="150000">150,000</option>
+        <option value="300000">300,000</option>
+        <option value="600000">600,000</option>
+        <option value="1000000">1,000,000</option>
+        <option value="1500000">1,500,000</option>
+      </select>
+    </div>
+
+  </div>
+
+  <button onclick="calculateDamage()">Calculate</button>
+
+  <div class="result" id="result"></div>
+</div>
+
+</main>
+</Layout>
