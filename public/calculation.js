@@ -134,6 +134,11 @@ const products = {
         licenceUses: 300,
         ingredients: { cotton: 1 , electricity: 0.3, water: 0.07 } 
     },
+    bacon: { 
+        workHours: 0.4, 
+        licenceUses: 1000,
+        ingredients: { cornflour: 0.2 ,vegetable: 0.8 , electricity: 0.03, water: 0.15 } 
+    },
     
 };
 
@@ -199,7 +204,8 @@ function calculateCostForPage() {
     const cornflourCost = parseFloat(document.getElementById("cornflourCost")?.value) || 0;
     const cornCost = parseFloat(document.getElementById("cornCost")?.value) || 0;
     const wheatCost = parseFloat(document.getElementById("wheatCost")?.value) || 0;
-     const cottonCost = parseFloat(document.getElementById("cottonCost")?.value) || 0;
+    const cottonCost = parseFloat(document.getElementById("cottonCost")?.value) || 0;
+    const vegetableCost = parseFloat(document.getElementById("vegetableCost")?.value) || 0;
 
     const LicenceForm = parseFloat(document.getElementById("LicenceForm")?.value) || 0;
     const LocalGold = parseFloat(document.getElementById("LocalGold")?.value) || 1;
@@ -265,6 +271,8 @@ function calculateCostForPage() {
             corn: cornCost,
             wheat: wheatCost,
             cotton: cottonCost,
+            vegetable: vegetableCost,
+
 
             
         };
