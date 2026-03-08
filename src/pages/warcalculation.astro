@@ -6,9 +6,9 @@ import Layout from '../components/Layout.astro';
 
 <div class="card">
   <div class="card wecome-card">
-    <h2><span>Damage </span> Calculator</h2>
+    <h2><span>Damage </span>   Calculator</h2>
     <p class="subtitle">
-      Calculate how many Mocha and total cost needed to reach target damage using your weapons and boosts.
+      Calculate how many Mocaccino and total cost are needed to reach your target damage.
     </p>
   </div>
 
@@ -20,8 +20,8 @@ import Layout from '../components/Layout.astro';
     </div>
 
     <div class="input-group">
-      <label for="mochaPrice">Mocha Price</label>
-      <input id="mochaPrice" type="number" placeholder="Mocha Price">
+      <label for="mochaPrice">Mocaccino Price</label>
+      <input id="mochaPrice" type="number" placeholder="Mocaccino Price">
     </div>
 
     <div class="input-group">
@@ -61,6 +61,7 @@ import Layout from '../components/Layout.astro';
         <option value="1500000">1,500,000</option>
       </select>
     </div>
+
     <div class="input-group check">
       <label><input type="checkbox" id="bunker"> Enemy in Bunker</label>
     </div>
@@ -77,20 +78,21 @@ import Layout from '../components/Layout.astro';
       <label><input type="checkbox" id="badge"> NK Badge</label>
     </div>
 
+
   </div>
 
   <!-- BUTTON -->
-<div class="card center-button">
-  <button id="damageCalcBtn" class="button">Calculate Damage</button>
-</div>
-
-<!-- RESULT -->
-<div class="card">
-  <div class="result">
-    <h3 class="gold-text">Result</h3>
-    <p id="damageResultText">Your damage breakdown will appear here.</p>
+  <div class="card center-button">
+    <button id="mocaccinoCalcBtn" class="button">Calculate Mocaccino</button>
   </div>
-</div>
+
+  <!-- RESULT -->
+  <div class="card">
+    <div class="result">
+      <h3 class="gold-text">Result</h3>
+      <p id="mocaccinoResultText">Your damage breakdown will appear here.</p>
+    </div>
+  </div>
 </div>
 
 </main>
