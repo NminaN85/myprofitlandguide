@@ -24,12 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
     let damagePerMocaccino = 0;
 
     for (let energy of energies) {
-      const hitDamage =
-        (weaponDamage * (energy / 100) * orgBonus * rank * poiBonus) *
-        bunker *
-        clothing *
-        nativeBonus *
-        badge;
+      let hitDamage = weaponDamage * (energy / 100);
+      hitDamage *= rank;      // نطبق الرانك فقط لو موجود
+      hitDamage *= orgBonus;  // Organisation Boost
+      hitDamage *= poiBonus;  // POI Region
+      hitDamage *= bunker * clothing * nativeBonus * badge;
       damagePerMocaccino += hitDamage;
     }
 
