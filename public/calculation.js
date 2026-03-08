@@ -124,6 +124,16 @@ const products = {
         licenceUses: 1000,
         ingredients: { corn: 1, electricity: 0.2, water: 0.2 } 
     },
+     paper: { 
+        workHours: 1, 
+        licenceUses: 400,
+        ingredients: { wood: 0.1, electricity: 0.3, water: 0.07 } 
+    },
+      cottonpaper: { 
+        workHours: 2, 
+        licenceUses: 300,
+        ingredients: { cotton: 1 , electricity: 0.3, water: 0.07 } 
+    },
     
 };
 
@@ -189,6 +199,7 @@ function calculateCostForPage() {
     const cornflourCost = parseFloat(document.getElementById("cornflourCost")?.value) || 0;
     const cornCost = parseFloat(document.getElementById("cornCost")?.value) || 0;
     const wheatCost = parseFloat(document.getElementById("wheatCost")?.value) || 0;
+     const cottonCost = parseFloat(document.getElementById("cottonCost")?.value) || 0;
 
     const LicenceForm = parseFloat(document.getElementById("LicenceForm")?.value) || 0;
     const LocalGold = parseFloat(document.getElementById("LocalGold")?.value) || 1;
@@ -251,8 +262,9 @@ function calculateCostForPage() {
             housewindow: housewindowCost,
             rawmilk: rawmilkCost,
             cornflour: cornflourCost,
-             corn: cornCost,
+            corn: cornCost,
             wheat: wheatCost,
+            cotton: cottonCost,
 
             
         };
