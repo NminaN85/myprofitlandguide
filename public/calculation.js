@@ -109,6 +109,16 @@ const products = {
         licenceUses: 160,
         ingredients: { cornflour: 2.5, electricity: 0.6, water: 1.3 } 
     },
+     housewindow: { 
+        workHours: 3, 
+        licenceUses: 200,
+        ingredients: { sand: 4, wood: 12, electricity: 1, water: 0.5 } 
+    },
+     glasspanel: { 
+        workHours: 2, 
+        licenceUses: 200,
+        ingredients: { sand: 2, electricity: 1, water: 0.5 } 
+    },
     
 };
 
