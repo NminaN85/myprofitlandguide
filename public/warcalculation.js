@@ -4,8 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!btn) return;
 
   btn.addEventListener("click", () => {
-
-      weaponPrice = Number(document.getElementById("weaponPrice")?.value || 0);
+    // ======== القيم من المستخدم ========
+    const weaponPrice = Number(document.getElementById("weaponPrice")?.value || 0);
     const mocaccinoPrice = Number(document.getElementById("mochaPrice")?.value || 0);
     const orgBoost = Number(document.getElementById("orgBoost")?.value || 0);
     const poiRegion = Number(document.getElementById("poiRegion")?.value || 0);
@@ -16,37 +16,44 @@ document.addEventListener("DOMContentLoaded", () => {
     const badge = document.getElementById("badge")?.checked ? 1.2 : 1;
     const targetDamage = Number(document.getElementById("targetDamage")?.value || 0);
 
-
+    // ======== إعداد الضربات لكل Mocaccino ========
     const energies = [100, 95, 90, 85];
-    const weaponDamagePerHit = 3000; // ثابت لكل ضربة
-    let baseDamage = 0;
+    const weaponDamage = 3000; // ثابت لكل ضربة
 
-    energies.forEach(energy => {
-      baseDamage += weaponDamagePerHit * (energy / 100);
-    });
-    // baseDamage الآن = 11100
+    // ======== حساب الضرر الفعلي لكل ضربة ========
+    let accumulatedDamage = 0;
+    let hitsCount = 0;
 
+    while (accumulatedDamage < targetDamage) {
+      for (let energy of energies) {
+        let hitDamage = weaponDamage * (energy / 100);
+        // نطبق modifiers بعد Base Damage لكل ضربة
+        hitDamage *= rank * (1 + orgBoost/100) * (1 + poiRegion/100) * bunker * clothing * nativeBonus * badge;
+        accumulatedDamage += hitDamage;
+        hitsCount++;
+        if (accumulatedDamage >= targetDamage) break;
+      }
+    }
 
-    let totalDamagePerMocaccino = baseDamage;
-    totalDamagePerMocaccino *= rank;                 // Rank
-    totalDamagePerMocaccino *= 1 + orgBoost / 100;   // Organisation Boost
-    totalDamagePerMocaccino *= 1 + poiRegion / 100;  // POI Region
-    totalDamagePerMocaccino *= bunker * clothing * nativeBonus * badge;
+    // ======== حساب عدد Mocaccino المطلوبة ========
+    const mocaccinoNeeded = Math.ceil(hitsCount / energies.length);
 
+    // ======== حساب عدد الأسلحة المطلوبة ========
+    const weaponsNeeded = Math.ceil(hitsCount / 200);
 
-    const mocaccinoNeeded = Math.ceil(targetDamage / totalDamagePerMocaccino);
-    const totalHits = mocaccinoNeeded * energies.length;
-    const weaponHitCost = weaponPrice / 200; // تكلفة كل ضربة من السلاح
-    const totalCost = mocaccinoNeeded * mocaccinoPrice + totalHits * weaponHitCost;
+    // ======== حساب التكلفة ========
+    const weaponsCost = weaponsNeeded * weaponPrice;
+    const mocaccinoCost = mocaccinoNeeded * mocaccinoPrice;
+    const totalCost = weaponsCost + mocaccinoCost;
 
-
+    // ======== عرض النتائج ========
     const resultText = document.getElementById("mocaccinoResultText");
     if (resultText) {
       resultText.innerHTML =
-
-        `Damage per Mocaccino : ${Math.round(totalDamagePerMocaccino)}<br>` +
+        `Damage per Mocaccino (4 hits base): ${Math.round(weaponDamage* (100/100) + weaponDamage*(95/100) + weaponDamage*(90/100) + weaponDamage*(85/100))}<br>` +
+        `Total Hits needed: ${hitsCount}<br>` +
         `Mocaccino Needed: ${mocaccinoNeeded}<br>` +
-        `Total Hits: ${totalHits}<br>` +
+        `Weapons Needed: ${weaponsNeeded}<br>` +
         `Total Cost: ${totalCost.toFixed(2)} Gold`;
     }
   });
