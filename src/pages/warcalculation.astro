@@ -6,7 +6,7 @@ import Layout from '../components/Layout.astro';
 
 <div class="card">
   <div class="card wecome-card">
-    <h2><span>Damage </span>   Calculator</h2>
+    <h2><span>Foundary </span> Mocaccino Damage Calculator</h2>
     <p class="subtitle">
       Calculate how many Mocaccino and total cost are needed to reach your target damage.
     </p>
@@ -37,6 +37,7 @@ import Layout from '../components/Layout.astro';
     <div class="input-group">
       <label for="rank">Military Rank</label>
       <select id="rank">
+        <option value="1">No Rank</option>
         <option value="1.05">Private (5%)</option>
         <option value="1.10">Corporal (10%)</option>
         <option value="1.15">Sergeant (15%)</option>
@@ -71,14 +72,14 @@ import Layout from '../components/Layout.astro';
     </div>
 
     <div class="input-group check">
-      <label><input type="checkbox" id="native"> Native Region</label>
+      <label><input type="checkbox" id="native"> Native Weapon</label>
     </div>
 
     <div class="input-group check">
       <label><input type="checkbox" id="badge"> NK Badge</label>
     </div>
 
-
+    
   </div>
 
   <!-- BUTTON -->
